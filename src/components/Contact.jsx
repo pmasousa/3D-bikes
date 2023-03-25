@@ -7,6 +7,7 @@ import { EarthCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { slideIn } from "../utils/motion"
 
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -17,9 +18,24 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {}
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
 
-  const handleSubmit = (e) => {}
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    alert("Thank you.");
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
