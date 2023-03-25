@@ -14,7 +14,7 @@ const Hero = () => {
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className='text-[#915eff]'>Pedro</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Tudo o que esta aqui é verdade. <br className='sm:block hidden' />source: <span className='text-[#915eff]'>confia</span>
+            Everything in here is true. <br className='sm:block hidden' />  <span className='text-[#915eff]'>source? </span>trust me bro
           </p>
         </div>
       </div>
